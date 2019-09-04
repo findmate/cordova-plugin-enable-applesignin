@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-applesignin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>AppleSignIn</name>
+  <js-module name="AppleSignIn" src="www/AppleSignIn.js">
+    <clobbers target="AppleSignIn" />
+  </js-module>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="AppleSignIn"><param name="ios-package" value="AppleSignIn" /></feature>
+    </config-file>
+    <source-file src="src/ios/AppleSignIn.m" />
+    <header-file src="src/ios/AppleSignIn.h" />
+
+    <framework src="AuthenticationServices.framework" />
+
+      <config-file target="**/Entitlements-Debug.plist" parent="com.apple.developer.applesignin">
+        <array><string>Default</string></array>
+      </config-file>
+      <config-file target="**/Entitlements-Release.plist" parent="com.apple.developer.applesignin">
+          <array><string>Default</string></array>
+      </config-file>
+  </platform>
+</plugin>
