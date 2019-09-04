@@ -8,10 +8,10 @@ var promiseWrapper = function(method) {
       exec(success, failure, MODULE_NAME, method, []);
   });
 }
-exports.getCredentialState = function (success, error) {
-    return promiseWrapper('getCredentialState');
+exports.startLogin = function () {
+    return promiseWrapper('startLogin');
 };
 
-exports.isAvailable = function (success) {
+exports.isAvailable = function () {
   return promiseWrapper('isAvailable');
 };

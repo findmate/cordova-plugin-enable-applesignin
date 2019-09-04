@@ -16,7 +16,7 @@
   [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
-- (void)getCredentialState:(CDVInvokedUrlCommand*)command {
+- (void)startLogin:(CDVInvokedUrlCommand*)command {
   if (@available(iOS 13.0, *)) {
     self.getCredentialStateCallbackId = command.callbackId;
     ASAuthorizationAppleIDProvider *appleIDProvider = [ASAuthorizationAppleIDProvider new];
