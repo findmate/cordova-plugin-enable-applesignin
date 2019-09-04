@@ -8,10 +8,17 @@
       "ios"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmagyar/cordova-plugin-applesignin"
+  },
+  "homepage": "https://github.com/zmagyar/cordova-plugin-applesignin",
   "keywords": [
     "ecosystem:cordova",
-    "cordova-ios"
+    "cordova-ios",
+    "apple-sign-in",
+    "sign in with Apple"
   ],
   "author": "Zoltan Magyar",
-  "license": "ISC"
+  "license": "GPL-3.0"
 }
