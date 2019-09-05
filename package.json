@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-applesignin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cordova plugin for Sign in with Apple",
   "cordova": {
     "id": "cordova-plugin-applesignin",
