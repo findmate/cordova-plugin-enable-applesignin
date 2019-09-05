@@ -1,13 +1,27 @@
-# cordova-plugin-applesignin
 Cordova Plugin for Sign in with Apple
+=====================================
+Enables cordova apps to use the new [**Sign in with Apple**](https://developer.apple.com/sign-in-with-apple/) feature what will be required for all iOS apps using any social login. 
 
-# API
+**Prerequisites**:
+* A Cordova 3.0+ project for iOS
+* XCode 11 (currently on beta)
 
-There are two public functions are available. The functions are returning Promises.
+## Installation
 
-isAvailable - checks the availability of the feature. The returned promise is resolving with true for iOS13+
+To install this plugin, follow the Command-line Interface Guide. You can use the following command line:
+```
+cordova plugin add cordova-plugin-applesignin 
+```
+Installing the plugin automatically adds the ```com.apple.developer.applesignin``` key to the entitlements to enable **Sign in with Apple** capability.
+# Javascript API
+**Note:** All API functions are returning Promises. In case of errors the returned promise is rejected with a string error message.
+There are two public functions are available. 
 
-startLogin - starts the login proccess. Returned Promise resolves with the returned login data or rejects with the error message. Cancelled login is also considered as a rejection. 
+### isAvailable 
+Checks the availability of the feature. The returned promise is resolving with true for iOS13+
+
+### startLogin 
+Starts the login proccess. Returned Promise resolves with the returned login data or rejects with an error message. Cancelled login is also considered as a rejection. 
 
 Example usage:
 
@@ -21,7 +35,7 @@ AppleSignIn.startLogin()
   }) 
 ```
 
-The retuned object contains the 
+In case of successful signin the returned promise resolves with an object containing the following keys:
 ```
 {
   email: "zoltan@powerednow.com",
@@ -30,3 +44,4 @@ The retuned object contains the
   user: "xxxxxx.4a9eb79a00384d3ab64f9d88902811ec.xxxx",
 }
 ```
+
