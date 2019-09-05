@@ -6,7 +6,7 @@ Enables cordova apps to use the new [**Sign in with Apple**](https://developer.a
 * A Cordova 3.0+ project for iOS
 * XCode 11 (currently on beta)
 
-## Installation
+# Installation
 
 To install this plugin, follow the Command-line Interface Guide. You can use the following command line:
 ```
@@ -44,4 +44,11 @@ In case of successful signin the returned promise resolves with an object contai
   user: "xxxxxx.4a9eb79a00384d3ab64f9d88902811ec.xxxx",
 }
 ```
+In case of error the promise is rejected with the following strings:
+* "Cancelled" - ASAuthorizationErrorCanceled
+* "Failed" - ASAuthorizationErrorFailed
+* "Invalid" - ASAuthorizationErrorInvalidResponse
+* "Not Handled" - ASAuthorizationErrorNotHandled:
+* "Unknown" - ASAuthorizationErrorUnknown
 
+See [Apple Documentation](https://developer.apple.com/documentation/authenticationservices/asauthorizationerror?language=objc) for the description of the errors.
