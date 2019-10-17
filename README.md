@@ -23,6 +23,8 @@ Checks the availability of the feature. The returned promise is resolving with t
 ### startLogin 
 Starts the login proccess. Returned Promise resolves with the returned login data or rejects with an error message. Cancelled login is also considered as a rejection. 
 
+The function has an optional userId argument where the previously received ```user``` parameter can be passed in.
+
 Example usage:
 
 ```
@@ -50,5 +52,24 @@ In case of error the promise is rejected with the following strings:
 * "Invalid" - ASAuthorizationErrorInvalidResponse
 * "Not Handled" - ASAuthorizationErrorNotHandled:
 * "Unknown" - ASAuthorizationErrorUnknown
+
+### isUserAuthorized
+Checks if the app is already authorized for the given ```user``` . 
+
+Example usage:
+
+```
+AppleSignIn.isUserAuthorized("xxxxxx.4a9eb79a00384d3ab64f9d88902811ec.xxxx")  
+  .then((res) => {
+    if (res) {
+      console.log('Authorized')
+    } else {
+      console.log('Unauthorized')
+    }
+  })
+  .catch((err) => {
+    console.log('error', err)
+  }) 
+```
 
 See [Apple Documentation](https://developer.apple.com/documentation/authenticationservices/asauthorizationerror?language=objc) for the description of the errors.

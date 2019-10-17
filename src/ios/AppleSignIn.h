@@ -19,6 +19,7 @@
 
 - (void)isAvailable:(CDVInvokedUrlCommand*)command;
 - (void)authorizationController:(ASAuthorizationController *)controller didCompleteWithAuthorization:(ASAuthorization *)authorization  API_AVAILABLE(ios(13.0));
+- (void)isUserAuthorized: (CDVInvokedUrlCommand*)command;
 - (void)authorizationController:(ASAuthorizationController *)controller didCompleteWithError:(NSError *)error  API_AVAILABLE(ios(13.0));
 - (void)startLogin:(CDVInvokedUrlCommand*)command;
 @end
