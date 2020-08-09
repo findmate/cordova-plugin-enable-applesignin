@@ -1,24 +1,27 @@
 {
-  "name": "cordova-plugin-enable-applesignin",
-  "version": "1.0.0",
-  "description": "Cordova plugin to enable Sign in with Apple",
-  "cordova": {
-    "id": "cordova-plugin-enable-applesignin",
-    "platforms": [
-      "ios"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/findmate/cordova-plugin-enable-applesignin"
-  },
-  "homepage": "https://github.com/findmate/cordova-plugin-enable-applesignin",
-  "keywords": [
-    "ecosystem:cordova",
-    "cordova-ios",
-    "apple-sign-in",
-    "sign in with Apple"
-  ],
-  "author": "Findmate, LLC",
-  "license": "GPL-3.0"
+    "name": "cordova-plugin-enable-applesignin",
+    "version": "1.0.0",
+    "description": "Cordova plugin to enable Sign in with Apple",
+    "cordova": {
+        "id": "cordova-plugin-enable-applesignin",
+        "platforms": [
+            "ios"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/findmate/cordova-plugin-enable-applesignin"
+    },
+    "homepage": "https://github.com/findmate/cordova-plugin-enable-applesignin",
+    "keywords": [
+        "ecosystem:cordova",
+        "cordova-ios",
+        "apple-sign-in",
+        "sign in with Apple"
+    ],
+    "author": "Findmate, LLC",
+    "license": "GPL-3.0",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
 }
