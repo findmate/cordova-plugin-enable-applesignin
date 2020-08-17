@@ -10,7 +10,7 @@ Enables cordova apps to use the new [**Sign in with Apple**](https://developer.a
 
 To install this plugin, follow the Command-line Interface Guide. You can use the following command line:
 ```
-cordova plugin add cordova plugin add https://github.com/findmate/cordova-plugin-enable-applesignin
+cordova plugin add https://github.com/findmate/cordova-plugin-enable-applesignin
 ```
 Installing the plugin automatically adds the ```com.apple.developer.applesignin``` key to the entitlements to enable **Sign in with Apple** capability.
 
